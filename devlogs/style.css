@@ -1,0 +1,15 @@
+body {
+    background-color: rgba(0, 0, 0, 0.445);
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.devlog-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.devlog-item-wrapper {
+    position: relative;
+}
