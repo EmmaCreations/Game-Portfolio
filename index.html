@@ -21,12 +21,41 @@
             </nav>
         </header>
         <main>
+            <div class="content-wrapper">
+                <div class="portfolio-items-wrapper">
+                    <div class="portfolio-item-wrapper">
+                        <a href="#" class="portfolio-link">
+                            <div class="portfolio-img-background" style="background-image:url(images/cdwars.png)"></div>
+                            <div class="img-text-wrapper">
+                                <div class="logo-wrapper">
+                                    <img src="images/logos/corndog_icon.png" alt="Corndog Wars logo">
+                                </div>
 
+                                <div class="subtitle">
+                                    Corndog Wars is an upcoming project being developed by Regno Studios.
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
         </main>
         <footer>
-
+            <iframe src="blank.html" frameborder="0"></iframe>
         </footer>
     </div>
 </body>
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-link')
 
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            portfolioItem.childNodes[1].classList.add('img-darken');
+        })
+        portfolioItem.addEventListener('mouseout', () => {
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+</script>
 </html>

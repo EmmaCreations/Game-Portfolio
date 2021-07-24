@@ -9,9 +9,12 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     color: white;
+    margin: 0px;
 }
 
 .everything {
+    display: grid;
+    grid-template-columns: 1fr;
     margin-left: auto;
     margin-right: auto;
 }
@@ -40,7 +43,7 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-a {
+nav a {
     background-color: #b2beb5;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -52,4 +55,56 @@ a {
 
 p {
     text-align: center;
+}
+
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper {
+    position: relative;
+}
+
+.portfolio-img-background {
+    height: 300px;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.logo-wrapper img{
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.img-text-wrapper .subtitle {
+    font-weight: 600;
+    transition: 1s;
+    color: transparent;
+
+}
+
+.img-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: white;
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
 }
