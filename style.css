@@ -51,6 +51,9 @@ nav a {
     text-align: center;
     display: inline-block;
     text-decoration: none;
+    letter-spacing: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 p {
@@ -96,7 +99,6 @@ p {
     font-weight: 600;
     transition: 1s;
     color: transparent;
-
 }
 
 .img-text-wrapper:hover .subtitle {
@@ -146,4 +148,121 @@ p {
     text-align: center;
     display: inline-block;
     text-decoration: none;
+}
+
+.burger {
+    display: none;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+
+}
+
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+        position: fixed;
+    }
+
+    .portfolio-img-background {
+        height: 150px;
+        width: auto;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .img-text-wrapper .subtitle {
+        font-weight: 100;
+        transition: 1s;
+        color: transparent;
+        width: 300%;
+    }
+
+    .img-text-wrapper:hover .subtitle {
+        font-weight: 100;
+        color: white;
+        width: 300%;
+    }
+    
+
+    .logo-wrapper img{
+        width: 60%;
+    }
+
+    header {
+        text-align: right;
+    }
+
+    h1 {
+        text-align: right;
+        font-size: 150%;
+    }
+    
+    nav {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        text-align: right;
+        background-color: #212121;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        transform: translateX(200%);
+        transition: transform 0.5s ease-in;
+    }
+
+    nav a {
+        opacity: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .burger {
+        display: block;
+    }
+    
+    .aaa {
+        text-align: left;
+    }
+}
+
+.nav-active {
+    transform: translateX(100%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-30px);
+    }
+}
+
+.burger-active {
+    transform: translateX(-20%);
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
 }
